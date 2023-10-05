@@ -1,5 +1,6 @@
 # Developing a Simple Webserver
-
+name:naveen kumar
+id:23013536
 # AIM:
 
 Develop a webserver to display about top five web application development frameworks.
@@ -27,7 +28,10 @@ Serving the HTML pages.
 Testing the webserver
 # PROGRAM:
 Type your code here
+```python
+```
 # OUTPUT:
+![Alt text](webserver.jpg)
 
 # RESULT:
 
