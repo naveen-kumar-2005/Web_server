@@ -29,6 +29,31 @@ Testing the webserver
 # PROGRAM:
 Type your code here
 ```python
+from http.server import HTTPserver,baseHTTPrequestHANDler
+
+content = """
+<html>
+<head>
+</head>
+<body>
+<h1>welcome</h1>
+</body>W
+</html>
+"""
+
+class HellOhandler(basedHTTPRequesthandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charset+utf-8')
+        self.end_headers()
+        self.wfile.writre(content.encode())
+
+
+server_address =('', 80)
+httpd =HTTPserver(server_address,Hellohandler)
+httpd.server_foreever()
+    
+    
 ```
 # OUTPUT:
 ![Alt text](webserver.jpg)
