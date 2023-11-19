@@ -16,30 +16,6 @@ HTML content creation is done
 Design of webserver workflow
 
 ## Step 3:
-from http.server import HTTPserver,baseHTTPrequestHANDler
-
-content = """
-<html>
-<head>
-</head>
-<body>
-<h1>naveen</h1>
-</body>W
-</html>
-"""
-
-class HellOhandler(basedHTTPRequesthandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charset+utf-8')
-        self.end_headers()
-        self.wfile.writre(content.encode())
-
-
-server_address =('', 80)
-httpd =HTTPserver(server_address,Hellohandler)
-httpd.server_foreever()
-    
     
 Implementation using Python code
 
@@ -51,37 +27,37 @@ Serving the HTML pages.
 
 Testing the webserver
 # PROGRAM:
-Type your code here
-```python
-from http.server import HTTPserver,baseHTTPrequestHANDler
-
+Type your code here python
+``````
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content = """
 content = """
 <html>
 <head>
+<title>webservers</title>
 </head>
 <body>
-<h1>naveen</h1>
-</body>W
+<h1>Top Five Web Apllication Development Framework</h1>
+<h1>1.Django</h1>
+<h2>2.MEAN Stack</h2>
+<h3>3.React<h3>
+</body>
 </html>
 """
+class HelloHandler(BaseHTTPRequestHandler):
+def do_GET(self):
+self.send_response(200)
+self.send_header('Content-type', 'text/html; charset=utf-8')
+self.end_headers()
+self.wfile.write(content.encode())
+server_address = ('', 80)
+httpd = HTTPServer(server_address, HelloHandler)
+httpd.serve_forever()
+``````
 
-class HellOhandler(basedHTTPRequesthandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charset+utf-8')
-        self.end_headers()
-        self.wfile.writre(content.encode())
-
-
-server_address =('', 80)
-httpd =HTTPserver(server_address,Hellohandler)
-httpd.server_foreever()
-    
-    
-```
 # OUTPUT:
-![Alt text](webserver.jpg)
 
+![Alt text](webstar.png.png)
 # RESULT:
 
 The program is executed succesfully
